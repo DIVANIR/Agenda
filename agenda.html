@@ -8,25 +8,103 @@
     <link rel="stylesheet" href="agenda.css">
 </head>
 <body>
-    <div class="calendar">
-        <div>
+    <div class="calendar"> 
+        <div class="header">
             <span class="previous"></span>
             <span class="month">novembro de 2021</span>
             <span class="next"></span>
-        </div> 
-        <div>
-            <table>
-                <thead>
-                    <th>D</th>
-                    <th>S</th>
-                    <th>T</th>
-                    <th>Q</th>
-                    <th>Q</th>
-                    <th>S</th>
-                    <th>S</th>
-                </thead>
-            </table>
+        
+            <div class="week">
+                DOM
+            </div>
+            <div class="week">
+                SEG
+            </div>
+            <div class="week">
+                TER
+            </div>
+            <div class="week">
+                QUA
+            </div>
+            <div class="week">
+                QUI
+            </div>
+            <div class="week">
+                SEX
+            </div>
+            <div class="week">
+                SAB
+            </div>
+
         </div>       
+            
+        <div class="days">
+           
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+        </div>       
+    </div>
+
+    <div class="modal">
+        <div class="modalAdd">
+            <form action="#">
+                <label for="date">Data:</label>
+                <input type="date" name="date">
+                <label for="client">Cliente:</label>
+                <input type="text" name="client">
+                <label for="service">Serviço:</label>
+                <input type="text" name="service">
+                <label for="address">Endereço:</label>
+                <input type="text" name="address">
+                <label for="team">Equipe:</label>
+                <select name="team">
+                    <option>Equipe 1</option>
+                    <option>Equipe 2</option>
+                    <option>Equipe 3</option>
+                </select>
+                <input type="button" value="Salvar">
+            </form>
+        </div>
     </div>
 
     <script src="agenda.js"></script>

@@ -1,7 +1,20 @@
+
+:root{
+    --unavailable_color:#A6242F;
+    --old_color_color:#CBDBD7;
+    --available_color:#00ff0078;
+    --holiday_color:#DE4043;
+    --full_color:#00FF00;
+}
+
+.calendar{
+    
+    background-color: rgb(203, 252, 247);
+}
+
 .previous{
     display: inline-block;
     vertical-align: middle;
-    margin-right: 10px;
     width: 0;
     height: 0;
 
@@ -12,21 +25,130 @@
     cursor: pointer;
 }
 
-.next{
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
+.month{
+    grid-column-start: 2;
+    grid-column-end: 7;
+    text-align: center;
+}
+
+.next{  
+    vertical-align: middle;    
     width: 0;
     height: 0;
+    
 
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 10px solid gray;
 
     cursor: pointer;
+
+    
+    
 }
-.month{
-    margin: 10px;
+
+.header{
+    display: grid;
+    grid-template-columns: repeat(7,2fr);
+}
+
+
+.days{
+    display: grid;
+    grid-template-columns: repeat(7,2fr);
+    column-gap: 2x;
+    width: 100%;
+}
+
+.week{
+    width: 98%;
+    margin: 1%;
+    text-align: center;
+}
+
+.day{
+    width: 98%;
+    height: 100px;
+    background-color: var(--available_color);
+    margin: 1%;
+    position: relative;
+}
+
+.day span{
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    background-color: var(--full_color);
+    padding: 5px 10px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    border: var(--holiday_color) solid 2px;
+    color: var(--holiday_color);
+    font-weight: bold;
+    display: none;
+}
+
+.day:hover span{
+    display: block;
+}
+
+.without{
+    background-color: var(--old_color_color);
+}
+
+.unavailable{
+    background-color: var(--unavailable_color);
+}
+
+.holiday{
+    background-color: var(--holiday_color) !important;
+}
+
+.full{
+    background-color: var(--full_color);
+}
+
+.modal{
+    width: 100%;
+    height: 100%;
+    background-color: #0007;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    display: none;
+    
+}
+
+.modalAdd{
+    width: 300px;
+    height: 350px;
+    background-color: white;
+    box-shadow: #0007 8px 8px 10px;
+    border-radius: 5px;
+    margin-top: 50px;
+    padding: 10px;
+    
+}
+
+.modalAdd input, .modalAdd select{
+    border:rgb(148, 222, 252) solid 1px;
+    border-radius: 3px;
+    font-size: 15px;
+    width: 95%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.modalAdd select{
+    width: 100%;
+}
+
+.modalAdd input[type="button"]{
+    width: 100%;
+    background-color: green;
+    color: white;
+    font-weight: bold;
 }
 
 
