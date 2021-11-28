@@ -129,28 +129,24 @@ const saveFile = (content, file)=>{
 
 }
 
-const readFile = input=>{
-    //const file = new File([input], input)
-    const file = input.target.files[0]
-    const reader = new FileReader()
-    reader.onload = (event) => {
-        const file = event.target.result
-        const allLines = file.split(/\r\n|\n/)
-        allLines.forEach(line=>{
-            console.log(line)
-        })
-    }
-
-    reader.onerror = event=>{
-        console.log(event.target.error.message)
-    }
-
-    reader.readAsText(file)
+const readFile = ()=>{
+    fetch("agenda.txt")
+    .then(e=>{
+        console.log(e)
+    })
+    .catch(e=>{
+        console.log(e)
+    })
+    .finally(e=>{
+        console.log(e)
+    })
 
     
 }
 
-    readFile(document.querySelector("#text"))
+readFile()
+
+  
 
 
 
