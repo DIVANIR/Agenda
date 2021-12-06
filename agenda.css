@@ -2,9 +2,15 @@
 :root{
     --unavailable_color:#A6242F;
     --old_color_color:#CBDBD7;
-    --available_color:#00ff0078;
+    --available_color:#00ff0044;
     --holiday_color:#DE4043;
     --full_color:#00FF00;
+}
+
+@keyframes alert {
+    0%{background-color: red  }
+    70%{background-color:  yellow }
+    100%{background-color:red }
 }
 
 .calendar{
@@ -68,10 +74,41 @@
 
 .day{
     width: 98%;
-    height: 100px;
+    min-height: 100px;
+    height: auto;
     background-color: var(--available_color);
     margin: 1%;
     position: relative;
+}
+
+.day ul{
+    margin: 0 5px 15px;
+    border:olive 1px solid;
+    border-radius: 8px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.day ul strong:first-child{
+    color: blue;
+}
+
+.day ul li{
+    margin-bottom: 5px;
+    position: relative;;
+}
+
+.day ul li .close{
+    top: 0px;
+    right: 0px;
+    bottom: auto;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.day ul li:hover .close{
+    display: block;
 }
 
 .day span{
@@ -89,6 +126,7 @@
     display: none;
 }
 
+
 .day:hover span{
     display: block;
 }
@@ -103,10 +141,22 @@
 
 .holiday{
     background-color: var(--holiday_color) !important;
+
 }
+
+
 
 .full{
     background-color: var(--full_color);
+}
+
+.alert{
+    animation: alert .8s infinite ease;
+}
+
+.today{
+    border:4px solid cyan;
+    box-shadow: cyan 0 0 50px inset;
 }
 
 .modal{
@@ -120,9 +170,9 @@
     
 }
 
-.modalAdd{
+.modalAdd, .modalUpdate{
     width: 300px;
-    height: 350px;
+    height: 400px;
     background-color: white;
     box-shadow: #0007 8px 8px 10px;
     border-radius: 5px;
@@ -131,7 +181,12 @@
     
 }
 
-.modalAdd input, .modalAdd select{
+.modalUpdate{
+    width: 200px;
+    height: 100px; 
+}
+
+ input,  select{
     border:rgb(148, 222, 252) solid 1px;
     border-radius: 3px;
     font-size: 15px;
@@ -140,11 +195,11 @@
     margin-bottom: 10px;
 }
 
-.modalAdd select{
+ select{
     width: 100%;
 }
 
-.modalAdd input[type="button"]{
+ input[type="submit"]{
     width: 100%;
     background-color: green;
     color: white;

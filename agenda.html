@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda</title>
     <link rel="stylesheet" href="agenda.css">
-</head>
+    <link rel="shortcut icon" href="favicon.ico">
+    </head>
 <body>
     <div class="calendar"> 
         <div class="header">
@@ -89,20 +90,40 @@
         <div class="modalAdd">
             <form action="#">
                 <label for="date">Data:</label>
-                <input type="date" name="date">
+                <input type="date" name="date" required>
                 <label for="client">Cliente:</label>
-                <input type="text" name="client">
+                <input type="text" name="client" required>
                 <label for="service">Serviço:</label>
-                <input type="text" name="service">
+                <input type="text" name="service" required>
                 <label for="address">Endereço:</label>
-                <input type="text" name="address">
+                <input type="text" name="address" required>
+                <label for="time">Tempo(em dias) serviço:</label>
+                <input type="number" name="time" min="1" required>
                 <label for="team">Equipe:</label>
                 <select name="team">
-                    <option>Equipe 1</option>
-                    <option>Equipe 2</option>
-                    <option>Equipe 3</option>
+                    <option>Levi de Paula</option>
+                    <option>Levi de Paula 1</option>
+                    <option>Levi de Paula 2</option>
+                    <option>Levi de Paula 3</option>
+                    <option>Romulo Crispim</option>
+                    <option>Paulo</option>
+                    <option>Luiz</option>
                 </select>
-                <input type="button" value="Salvar">
+                <input type="submit" value="Salvar">
+            </form>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modalUpdate">
+            <form action="#">
+                <label for="status">Situação</label>
+                <select name="status">
+                    <option>Não iniciada</option>
+                    <option>Em andamento</option>
+                    <option>Finalizado</option>
+                </select>
+                <input type="submit" value="Salvar">
             </form>
         </div>
     </div>
